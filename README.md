@@ -9,8 +9,17 @@ This folder is a static, zero-dependency source for the pre-launch product page 
 - `og-image.png` — 1200×630 social share image referenced by the Open Graph / Twitter Card meta tags.
 - `app-icon.png` (source, 1024×1024) and `app-icon-256.png` (web-sized derivative used by the page and favicon). Regenerate the small one with `sips -Z 256 app-icon.png --out app-icon-256.png` if the icon changes.
 - `styles.css` — shared stylesheet for the legal/support pages only; the landing page does not use it.
-- `privacy.html`, `terms.html`, `subscription.html`, `support.html` — legal and support pages.
+- `privacy.html`, `terms.html`, `subscription.html`, `support.html` — legal and support pages. The privacy policy also ships in every language the app supports: `privacy-zh-Hans.html` (简体中文) and `privacy-zh-Hant.html` (繁體中文), cross-linked via the language switcher on each privacy page. The app opens the variant matching the system language (`AppLegalIdentity.localizedPrivacyPolicyURL`); keep the three privacy pages' content and section numbering in sync when editing.
 - `config.js` + `site.js` — deployment values injected into `data-app-store-link`, `data-legal-name`, `data-support-email`, and `data-updated` placeholders on every page.
+
+## Deployment (GitHub Pages)
+
+This site is deployed as GitHub Pages from the public repository `uin3566outlook/trackmoney-site`, branch `gh-pages`:
+
+- Privacy Policy: `https://uin3566outlook.github.io/trackmoney-site/privacy.html` (already wired into `TrackMoney/Info.plist` → `PrivacyPolicyURL`; the in-app Settings → Privacy Policy page loads this URL in a web view and falls back to the bundled copy if it is unset).
+- Support / Terms / Subscription / landing pages live at the same base URL.
+
+To redeploy after editing anything here: copy the folder contents (excluding `.DS_Store`, keep `.nojekyll`) into a checkout of that repo's `gh-pages` branch, commit, and push. Pages publishes within about a minute.
 
 Before public deployment:
 
