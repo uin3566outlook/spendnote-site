@@ -1,4 +1,8 @@
 (function () {
+  if (new URLSearchParams(window.location.search).get("embed") === "1") {
+    document.body.classList.add("embedded");
+  }
+
   const config = window.TrackMoneySiteConfig || {};
   const email = config.supportEmail || "support@trackmoney.app";
 

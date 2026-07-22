@@ -110,11 +110,6 @@ h1 { max-width: 710px; margin-bottom: 18px; font-size: clamp(42px, 7vw, 72px); l
 .updated { color: var(--muted); font-size: 14px; }
 .legal-intro { color: var(--muted); font-size: 18px; }
 
-.lang-switch { margin-top: 10px; font-size: 14px; color: var(--muted); }
-.lang-switch a { color: var(--blue); text-decoration: none; }
-.lang-switch a:hover { text-decoration: underline; }
-.lang-switch a[aria-current="page"] { color: var(--ink); font-weight: 700; pointer-events: none; }
-.lang-switch .sep { margin: 0 6px; color: var(--line); }
 .legal-section { max-width: 800px; padding: 24px 0; border-top: 1px solid var(--line); }
 .legal-section h2 { margin-bottom: 10px; font-size: 23px; }
 .legal-section p, .legal-section li { color: #34455e; }
@@ -125,11 +120,26 @@ h1 { max-width: 710px; margin-bottom: 18px; font-size: clamp(42px, 7vw, 72px); l
 .footer-links { display: flex; gap: 14px; flex-wrap: wrap; }
 .footer-links a { text-decoration: none; }
 
+/* Embedded in the app (?embed=1): the hosting app already shows the page title
+   and its own navigation, so the site chrome and duplicate heading are hidden. */
+.embedded .site-header,
+.embedded .site-footer { display: none; }
+.embedded .legal-page { padding: 20px 0 48px; }
+.embedded .legal-page header { margin-bottom: 18px; }
+.embedded .legal-page .eyebrow,
+.embedded .legal-page h1 { display: none; }
+.embedded .legal-intro { margin-bottom: 0; font-size: 15px; }
+
 @media (max-width: 720px) {
   .shell { width: min(100% - 32px, 1040px); }
-  .site-header .shell { align-items: flex-start; }
-  .site-nav { justify-content: flex-end; gap: 10px; }
+  .site-header .shell { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .site-nav { justify-content: flex-start; gap: 14px; }
   .hero-grid { grid-template-columns: 1fr; }
   .app-preview { min-height: 280px; }
   .feature-grid { grid-template-columns: 1fr; }
+  .legal-page { padding: 32px 0 56px; }
+  .legal-page h1 { font-size: 30px; }
+  .legal-intro { font-size: 16px; }
+  .legal-section { padding: 18px 0; }
+  .legal-section h2 { font-size: 19px; }
 }
