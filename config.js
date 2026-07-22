@@ -3,5 +3,5 @@ window.TrackMoneySiteConfig = {
   appStoreURL: "",
   developerLegalName: "[Apple Developer Account Legal Name]",
   supportEmail: "support@trackmoney.app",
-  lastUpdated: "July 21, 2026"
+  lastUpdated: "July 22, 2026"
 };
