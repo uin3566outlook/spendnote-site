@@ -6,7 +6,8 @@ This folder is a static, zero-dependency source for the pre-launch product page 
 
 - `index.html` + `landing.css` + `landing.js` — the marketing page (light visual design matching the app's design tokens, real app screenshots, scroll-reveal, social meta tags). No build step, no external fonts, no CDN, no analytics.
 - `screens/` — the nine app screenshots used by the page, plus a README mapping each filename to the app screen it should show. Solid-color placeholders are committed; overwrite them with real English-language screenshots before deployment.
-- `og-image-v2.jpg` — 1200×630 social share image referenced by the Open Graph / Twitter Card meta tags. Its versioned URL makes social platforms fetch this current card rather than reuse the old preview.
+- `og-image-v2.jpg` — 1200×630 social image used by the main landing page metadata.
+- `share-2026-07.html` + `trackmoney-social-2026-07.jpg` — versioned X sharing page and image. Use the share page URL for the July 2026 campaign so X does not reuse a cached card for the main landing page.
 - `app-icon.png` (source, 1024×1024) and `app-icon-256.png` (web-sized derivative used by the page and favicon). Regenerate the small one with `sips -Z 256 app-icon.png --out app-icon-256.png` if the icon changes.
 - `styles.css` — shared stylesheet for the legal/support pages only; the landing page does not use it.
 - `privacy.html`, `terms.html`, `support.html` — legal and support pages. The Terms of Service page includes the subscription/billing terms; `subscription.html` is kept only as a redirect to `terms.html` so old links keep working. Both the privacy policy and the terms ship in every language the app supports (`privacy-zh-Hans.html` / `privacy-zh-Hant.html`, `terms-zh-Hans.html` / `terms-zh-Hant.html`). The app opens the variant matching its current language (`AppLegalIdentity.localizedPrivacyPolicyURL` / `localizedTermsOfServiceURL`) with an `?embed=1` query flag, which hides the site header/footer inside the app's web view; keep the language variants' content and section numbering in sync when editing.
@@ -27,7 +28,7 @@ Before public deployment:
 2. Set `TrackMoney/Info.plist` → `PrivacyPolicyURL` to the final public HTTPS URL for `privacy.html`. The app only exposes the web-policy link when this value is valid.
 3. Have the Privacy Policy, Terms of Service, and Subscription Terms reviewed for the developer's actual legal entity, markets, and data practices.
 4. Host this directory on a public HTTPS domain. Use the resulting URLs in App Store Connect, the App Store subscription product configuration, and the app's legal links.
-5. Keep the absolute `og:image` / `twitter:image` URL in `index.html` aligned with the production domain — social crawlers require absolute URLs. The current card uses `og-image-v2.jpg`.
-6. Verify the App Store button works, legal pages are publicly accessible without login, no placeholder text remains, and the share preview renders `og-image-v2.jpg` correctly (e.g. via a social card validator).
+5. Keep the absolute `og:image` / `twitter:image` URLs aligned with the production domain — social crawlers require absolute URLs. When changing a campaign card, create a new versioned share page and image path instead of relying on query parameters.
+6. Verify the App Store button works, legal pages are publicly accessible without login, no placeholder text remains, and the share preview renders its versioned image correctly (e.g. via a social card validator).
 
 The page deliberately has no form, analytics SDK, cookie banner, external payment link, or bank-connection flow. It should not be published while `config.js` still contains placeholder identity or support details.
