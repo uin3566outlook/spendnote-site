@@ -6,18 +6,18 @@ This folder is a static, zero-dependency source for the pre-launch product page 
 
 - `index.html` + `landing.css` + `landing.js` — the marketing page (light visual design matching the app's design tokens, real app screenshots, scroll-reveal, social meta tags). No build step, no external fonts, no CDN, no analytics.
 - `screens/` — the eight current app screenshots used by the page, plus a README mapping each filename to the app screen it should show.
-- `og-image-v3.jpg` — 1200×630 social image used by the main landing page metadata.
+- `og-image-v4.jpg` — 1200×630 social image used by the main landing page metadata.
 - `share-2026-07.html` — legacy campaign URL that now redirects to the current landing page.
-- `app-icon.png` (source, 1024×1024) and `app-icon-256.png` (web-sized derivative used by the page and favicon). Regenerate the small one with `sips -Z 256 app-icon.png --out app-icon-256.png` if the icon changes.
+- `spendnote-app-icon.png` and `spendnote-app-icon-256.png` are the exact App Icon source and web-sized favicon; `spendnote-mark-256.png` is a centered crop used in the site header so the same mark remains legible at small sizes. All three derive from `TrackMoney/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png`.
 - `styles.css` — shared stylesheet for the legal/support pages only; the landing page does not use it.
 - `privacy.html`, `terms.html`, `support.html` — legal and support pages. The Terms of Service page includes the subscription/billing terms; `subscription.html` is kept only as a redirect to `terms.html` so old links keep working. Both the privacy policy and the terms ship in every language the app supports (`privacy-zh-Hans.html` / `privacy-zh-Hant.html`, `terms-zh-Hans.html` / `terms-zh-Hant.html`). The app opens the variant matching its current language (`AppLegalIdentity.localizedPrivacyPolicyURL` / `localizedTermsOfServiceURL`) with an `?embed=1` query flag, which hides the site header/footer inside the app's web view; keep the language variants' content and section numbering in sync when editing.
 - `config.js` + `site.js` — deployment values injected into `data-app-store-link`, `data-legal-name`, `data-support-email`, and `data-updated` placeholders on every page.
 
 ## Deployment (GitHub Pages)
 
-This site is deployed as GitHub Pages from the public repository `uin3566outlook/trackmoney-site`, branch `gh-pages`:
+This site is deployed as GitHub Pages from the public repository `uin3566outlook/spendnote-site`, branch `gh-pages`:
 
-- Privacy Policy: `https://uin3566outlook.github.io/trackmoney-site/privacy.html` (already wired into `TrackMoney/Info.plist` → `PrivacyPolicyURL`; the in-app Settings → Privacy Policy page loads this URL in a web view and falls back to the bundled copy if it is unset).
+- Privacy Policy: `https://uin3566outlook.github.io/spendnote-site/privacy.html` (already wired into `TrackMoney/Info.plist` → `PrivacyPolicyURL`; the in-app Settings → Privacy Policy page loads this URL in a web view and falls back to the bundled copy if it is unset).
 - Support / Terms / Subscription / landing pages live at the same base URL.
 
 To redeploy after editing anything here: copy the folder contents (excluding `.DS_Store`, keep `.nojekyll`) into a checkout of that repo's `gh-pages` branch, commit, and push. Pages publishes within about a minute.
