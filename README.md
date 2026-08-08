@@ -1,4 +1,4 @@
-# TrackMoney Landing And Legal Pages
+# SpendNote Landing And Legal Pages
 
 This folder is a static, zero-dependency source for the pre-launch product page and the public legal/support pages required by the PRD.
 

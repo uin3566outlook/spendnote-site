@@ -1,4 +1,4 @@
-/* TrackMoney landing interactions — zero-dependency, privacy-safe (no network). */
+/* SpendNote landing interactions — zero-dependency, privacy-safe (no network). */
 (function () {
   "use strict";
 

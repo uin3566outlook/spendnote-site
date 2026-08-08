@@ -10,11 +10,9 @@ the original full-size PNGs from the first capture are archived in
 | `home.jpg` | Home tab (month overview, budget progress, top categories) | Hero + "A look inside" | Real screenshot |
 | `add-expense.jpg` | Add Expense (category-first picker) | "A look inside" | Real screenshot |
 | `transactions.jpg` | Transactions tab (search, filters, day list) | "A look inside" | Real screenshot |
-| `budgets.jpg` | Budgets tab (pace, forecast, daily allowance) | "A look inside" | Real screenshot |
+| `budgets.jpg` | Budgets tab (progress, category limits, remaining spend) | "A look inside" | Real screenshot |
 | `insights.jpg` | Insights overview (category breakdown chart) | Insights section | Real screenshot |
-| `monthly-review.jpg` | Monthly review (recap, no-spend days, top category) | Insights section | Real screenshot |
 | `share-card.jpg` | Share card sheet (the blue card with amount-detail picker) | Share cards section | Real screenshot |
-| `share-moments.jpg` | Shareable moments list in Monthly review | Share cards section | Real screenshot |
 | `widgets.jpg` | Widget settings preview (small / medium / Lock Screen) | Widgets section | Real screenshot |
 
 Guidelines:

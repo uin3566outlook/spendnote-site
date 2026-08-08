@@ -4,7 +4,7 @@
   }
 
   const config = window.TrackMoneySiteConfig || {};
-  const email = config.supportEmail || "support@trackmoney.app";
+  const email = config.supportEmail || "airproductlab2@gmail.com";
 
   document.querySelectorAll("[data-support-email]").forEach((node) => {
     node.textContent = email;
@@ -12,11 +12,11 @@
   });
 
   document.querySelectorAll("[data-legal-name]").forEach((node) => {
-    node.textContent = config.developerLegalName || "[Apple Developer Account Legal Name]";
+    node.textContent = config.developerLegalName || "yehuanwei";
   });
 
   document.querySelectorAll("[data-updated]").forEach((node) => {
-    node.textContent = config.lastUpdated || "July 16, 2026";
+    node.textContent = config.lastUpdated || "August 8, 2026";
   });
 
   document.querySelectorAll("[data-app-store-link]").forEach((node) => {
