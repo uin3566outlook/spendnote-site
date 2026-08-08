@@ -4,7 +4,7 @@
   }
 
   const config = window.TrackMoneySiteConfig || {};
-  const email = config.supportEmail || "airproductlab2@gmail.com";
+  const email = config.supportEmail || "airproductlab@gmail.com";
 
   document.querySelectorAll("[data-support-email]").forEach((node) => {
     node.textContent = email;
