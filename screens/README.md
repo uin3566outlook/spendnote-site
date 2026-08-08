@@ -1,19 +1,21 @@
 # Landing Page Screenshots
 
-`index.html` references these files. When retaking a screenshot, overwrite the
-matching file — no HTML changes needed. JPEG (quality ~88) keeps the page light;
-the original full-size PNGs from the first capture are archived in
-`tmp/landing-assets-originals/`.
+`index.html` references these files. They are current English-language Pro
+simulator captures made on August 8, 2026. When retaking a screenshot, overwrite
+the matching file and update the cache key in `index.html`. JPEG quality ~88
+keeps the page light; source PNGs are kept under
+`tmp/spendnote-demo-assets/screenshots/`.
 
 | File | App screen | Used in | Status |
 | --- | --- | --- | --- |
-| `home.jpg` | Home tab (month overview, budget progress, top categories) | Hero + "A look inside" | Real screenshot |
-| `add-expense.jpg` | Add Expense (category-first picker) | "A look inside" | Real screenshot |
-| `transactions.jpg` | Transactions tab (search, filters, day list) | "A look inside" | Real screenshot |
-| `budgets.jpg` | Budgets tab (progress, category limits, remaining spend) | "A look inside" | Real screenshot |
-| `insights.jpg` | Insights overview (category breakdown chart) | Insights section | Real screenshot |
-| `share-card.jpg` | Share card sheet (the blue card with amount-detail picker) | Share cards section | Real screenshot |
-| `widgets.jpg` | Widget settings preview (small / medium / Lock Screen) | Widgets section | Real screenshot |
+| `home.jpg` | Home (month overview, review, insights, top categories) | Hero + "A look inside" | Current screenshot |
+| `transactions.jpg` | Transactions (search, filters, recurring bills, day list) | "A look inside" | Current screenshot |
+| `budgets.jpg` | Budgets (overall and category budget progress) | "A look inside" | Current screenshot |
+| `settings.jpg` | Settings (Pro status, preferences, widgets, data tools) | "A look inside" | Current screenshot |
+| `insights.jpg` | Insights overview (snapshot, drivers, category breakdown) | Insights | Current screenshot |
+| `insights-trend.jpg` | Insights trend and category detail | Insights | Current screenshot |
+| `monthly-review.jpg` | Monthly Review (period comparison and filters) | Monthly Review | Current screenshot |
+| `recurring.jpg` | Recurring Control (commitments, categories, upcoming costs) | Recurring Control | Current screenshot |
 
 Guidelines:
 

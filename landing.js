@@ -82,7 +82,7 @@
     function (el) {
       return {
         host: el,
-        frame: el.querySelector(".phone, .share-shot"),
+        frame: el.querySelector(".phone"),
         factor: parseFloat(el.getAttribute("data-parallax")) || 0
       };
     }
