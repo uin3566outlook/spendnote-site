@@ -3,5 +3,5 @@ window.TrackMoneySiteConfig = {
   appStoreURL: "",
   developerLegalName: "yehuanwei",
   supportEmail: "airproductlab@gmail.com",
-  lastUpdated: "August 8, 2026"
+  lastUpdated: "August 9, 2026"
 };
