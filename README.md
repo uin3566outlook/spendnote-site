@@ -1,12 +1,12 @@
 # SpendNote Landing And Legal Pages
 
-This folder is a static, zero-dependency source for the pre-launch product page and the public legal/support pages required by the PRD.
+This folder is the static, zero-dependency source for the public product page and the legal/support pages required by the PRD.
 
 ## Files
 
 - `index.html` + `landing.css` + `landing.js` — the marketing page (light visual design matching the app's design tokens, real app screenshots, scroll-reveal, social meta tags). No build step, no external fonts, no CDN, no analytics.
 - `screens/` — the eight current app screenshots used by the page, plus a README mapping each filename to the app screen it should show.
-- `og-image-v4.jpg` — 1200×630 social image used by the main landing page metadata.
+- `og-image-v5.jpg` — 1200×630 social image used by the main landing page metadata. `og-image-v4.jpg` is retained as the previous version.
 - `share-2026-07.html` — legacy campaign URL that now redirects to the current landing page.
 - `spendnote-app-icon.png` and `spendnote-app-icon-256.png` are the exact App Icon source and web-sized favicon; `spendnote-mark-256.png` is a centered crop used in the site header so the same mark remains legible at small sizes. All three derive from `TrackMoney/Assets.xcassets/AppIcon.appiconset/AppIcon-1024.png`.
 - `styles.css` — shared stylesheet for the legal/support pages only; the landing page does not use it.

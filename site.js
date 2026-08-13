@@ -20,7 +20,8 @@
   });
 
   document.querySelectorAll("[data-app-store-link]").forEach((node) => {
-    const url = String(config.appStoreURL || "").trim();
+    const fallbackURL = String(node.getAttribute("href") || "").trim();
+    const url = String(config.appStoreURL || fallbackURL).trim();
     if (url.startsWith("https://")) {
       node.href = url;
       node.removeAttribute("aria-disabled");
